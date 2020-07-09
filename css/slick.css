@@ -1,0 +1,121 @@
+.slick-slider {
+    position: relative;
+}
+
+.slick-list {
+    overflow: hidden;
+}
+
+
+/* Лента слайдов */
+
+.slick-track {
+    display: flex;
+}
+
+
+/* Стрелка */
+
+.slick-arrow {
+    top: 50%;
+    box-sizing: border-box;
+    width: 46px;
+    height: 101px;
+    position: absolute;
+    font-size: 0;
+    margin: -50px 0 0 0;
+    box-shadow: none;
+    z-index: 2;
+}
+
+
+/* Стрелка влево */
+
+.slick-arrow.slick-prev {
+    left: 0;
+    background: black url(../arrow-prev.svg) 50% 50% / 100% no-repeat;
+}
+
+
+/* Стрелка вправо */
+
+.slick-arrow.slick-next {
+    right: 0;
+    background: black url(../arrow-next.svg) 50% 50% /100% no-repeat;
+}
+
+
+/* Точки (булиты) */
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.slick-dots li {
+    list-style: none;
+}
+
+
+/* Элемент точки */
+
+.slick-dots li button {
+    font-size: 0;
+    width: 20px;
+    margin: 10px 2px;
+    padding: 0;
+    height: 20px;
+    background-color: #414146;
+    box-shadow: none;
+}
+
+
+/* Активная точка */
+
+.slick-dots li.slick-active button {
+    background-color: #ffea00;
+    box-shadow: inset 0 0 0 2px #414146;
+}
+
+
+/* Слайдер в шапке */
+
+body {
+    overflow: auto;
+}
+
+.slider {
+    margin: auto;
+    max-width: 1920px;
+    background: url(../img/slider_bg.jpg) no-repeat;
+    background-size: 1920px 823px;
+    padding: 20px -46px 0 46px;
+}
+
+.slider .slick-slide {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.slider .slick-track {
+    max-height: 750px;
+}
+
+
+/* Слайдер Клиенты */
+
+.client-slider {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 1200px;
+    margin: auto;
+    min-width: 1px;
+    padding: 0 40px;
+}
+
+.client-slider .slick-slide {
+    text-align: center;
+}

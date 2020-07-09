@@ -1,0 +1,92 @@
+.form {
+    display: none;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    z-index: 2000;
+    background: #eeeeee;
+    max-width: 420px;
+    padding: 10px 20px 20px 20px;
+}
+
+@media (max-width:510px) {
+    .form {
+        max-width: 240px;
+    }
+}
+
+*html .form {
+    position: absolute;
+}
+
+.form input,
+.form textarea {
+    background-color: #424147;
+    border: none;
+    border-bottom: 2px solid #ffea00;
+    padding: 4px;
+    margin-bottom: 10px;
+    height: 20px;
+    width: 98%;
+    outline: none;
+    color: white;
+}
+
+.form textarea {
+    height: 60px;
+}
+
+.form-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 12px;
+    height: 12px;
+    background: url(../close.svg) no-repeat center center /100%;
+    cursor: pointer;
+    z-index: 2103;
+}
+
+.form-close:hover {
+    opacity: 0.7;
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+#fade {
+    display: none;
+    background: #2c3e50;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .50;
+    z-index: 1000;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.form h2 {
+    color: #000000;
+    background-color: #ffea00;
+    padding: 6px;
+    text-align: left;
+    max-width: 50%;
+}
+
+.form label {
+    margin-bottom: 5px;
+    line-height: 30px;
+}
+
+.form button {
+    transition: all 0.6s ease-in-out;
+}
+
+.form button:hover {
+    color: #ffea00;
+}

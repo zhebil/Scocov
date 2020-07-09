@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="charset" content="utf-8">
+    <meta name="lang" content="en">
+    <meta name="author" content="Bilyk Zhenja">
+    <meta name="description" content="Web development studio 'Skokov'">
+    <meta name="keywords" content="web development, web design, graphic design">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/png">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+    <script src="js/slick.js"></script>
+    <script src="js/slick.min.js"></script>
+
+    <link rel="stylesheet" href="css/form-style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="css/adaptive.css" rel="stylesheet">
+
+    <title>SKOKOV</title>
+</head>
+
+<body>
+
+
+
+
+    <div id="popup" class="form">
+        <form id="contact_form" method="post" action="url">
+            <h2>Order form</h2>
+            <input type="text" id="name" name="name" class="name" pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Enter your name" required>
+            <input type="text" id="surname" name="surname" class="surname" pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Enter your surname" required>
+            <input type="tel" name="Phone" id="phone" placeholder="Enter your phone number" required>
+            <input type="email" name="email-order" id="email-order" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@gmail.com" required>
+            <textarea id="order-text" placeholder="Enter your order" required></textarea>
+            <button type="submit" class="order">Order</button>
+        </form>
+    </div>
+
+    <ul class="menu-none">
+
+        <li class="menu-item"><a href="index.html">Home</a></li>
+
+        <li class="menu-item"> <a href="#services">services</a></li>
+        <li class="menu-item"> <a href="#work">work</a></li>
+        <li class="menu-item"><a href="#clients">clients</a></li>
+        <li class="menu-item"><a href="#contact">Contact</a></li>
+    </ul>
+    <header>
+        <div class="top"></div>
+        <nav id="menu" class="main-menu non-fixed">
+            <a href="/"><img src="img/Logo.png" width="116" height="116" alt="Logo" class="logo"></a>
+            <div class="burger"><span></span></div>
+            <ul class="menu-ul">
+                <li><a href="index.html">Home</a></li>
+                <li> <a href="#services">services</a></li>
+                <li> <a href="#work">work</a></li>
+                <li><a href="#clients">clients</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="slider">
+            <div>
+                <div class="slider-inner">
+                    <div class="text">
+                        <h1> <span class="h-bg"> We believe</span> <br> <span class="h-bg"> in quality design </span></h1>
+                        <p>
+                            <span class="text-bg"> Any creative project is unique </span> <br>
+                            <span class="text-bg">and should be provided with </span> <br>
+                            <span class="text-bg">the appropriate quality</span>
+                        </p>
+
+                    </div>
+                    <button class="order-button">Order now</button>
+
+                    <div class="images">
+                        <div class="line-1"> <img src="img/slider-img/img_1.jpg" width="130" alt="photo-1">
+                            <img src="img/slider-img/img_10.jpg" width="130" alt="photo-10">
+                            <img src="img/slider-img/img_8.jpg" width="130" alt="photo-8"></div>
+                        <div class="line-2">
+                            <img src="img/slider-img/img_9.jpg" width="130" alt="photo-9">
+                            <img src="img/slider-img/img_3.jpg" width="130" alt="photo-3">
+                            <img src="img/slider-img/img_2.jpg" width="130" alt="photo-2"></div>
+                        <div class="line-3">
+                            <img src="img/slider-img/img_6.jpg" width="130" alt="photo-6">
+                            <img src="img/slider-img/img_5.jpg" width="130" alt="photo-5">
+                            <img src="img/slider-img/img_7.jpg" width="130" alt="photo-7"></div>
+
+                        <div> <img src="img/slider-img/img_4.jpg" width="130" alt="photo-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider-inner">
+                    <div class="text">
+                        <h1> <span class="h-bg"> We believe</span> <br> <span class="h-bg"> in quality design </span></h1>
+                        <p>
+                            <span class="text-bg"> Any creative project is unique </span> <br>
+                            <span class="text-bg">and should be provided with </span> <br>
+                            <span class="text-bg">the appropriate quality</span>
+                        </p>
+
+                    </div>
+                    <button class="order-button">Order now</button>
+
+                    <div class="images">
+                        <div class="line-1"> <img src="img/slider-img/img_1.jpg" width="130" alt="photo-1">
+                            <img src="img/slider-img/img_10.jpg" width="130" alt="photo-10">
+                            <img src="img/slider-img/img_8.jpg" width="130" alt="photo-8"></div>
+                        <div class="line-2">
+                            <img src="img/slider-img/img_9.jpg" width="130" alt="photo-9">
+                            <img src="img/slider-img/img_3.jpg" width="130" alt="photo-3">
+                            <img src="img/slider-img/img_2.jpg" width="130" alt="photo-2"></div>
+                        <div class="line-3">
+                            <img src="img/slider-img/img_6.jpg" width="130" alt="photo-6">
+                            <img src="img/slider-img/img_5.jpg" width="130" alt="photo-5">
+                            <img src="img/slider-img/img_7.jpg" width="130" alt="photo-7"></div>
+
+                        <div> <img src="img/slider-img/img_4.jpg" width="130" alt="photo-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider-inner">
+                    <div class="text">
+                        <h1> <span class="h-bg"> We believe</span> <br> <span class="h-bg"> in quality design </span></h1>
+                        <p>
+                            <span class="text-bg"> Any creative project is unique </span> <br>
+                            <span class="text-bg">and should be provided with </span> <br>
+                            <span class="text-bg">the appropriate quality</span>
+                        </p>
+
+                    </div>
+                    <button class="order-button">Order now</button>
+
+                    <div class="images">
+                        <div class="line-1"> <img src="img/slider-img/img_1.jpg" width="130" alt="photo-1">
+                            <img src="img/slider-img/img_10.jpg" width="130" alt="photo-10">
+                            <img src="img/slider-img/img_8.jpg" width="130" alt="photo-8"></div>
+                        <div class="line-2">
+                            <img src="img/slider-img/img_9.jpg" width="130" alt="photo-9">
+                            <img src="img/slider-img/img_3.jpg" width="130" alt="photo-3">
+                            <img src="img/slider-img/img_2.jpg" width="130" alt="photo-2"></div>
+                        <div class="line-3">
+                            <img src="img/slider-img/img_6.jpg" width="130" alt="photo-6">
+                            <img src="img/slider-img/img_5.jpg" width="130" alt="photo-5">
+                            <img src="img/slider-img/img_7.jpg" width="130" alt="photo-7"></div>
+
+                        <div> <img src="img/slider-img/img_4.jpg" width="130" alt="photo-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="slider-inner">
+                    <div class="text">
+                        <h1> <span class="h-bg"> We believe</span> <br> <span class="h-bg"> in quality design </span></h1>
+                        <p>
+                            <span class="text-bg"> Any creative project is unique </span> <br>
+                            <span class="text-bg">and should be provided with </span> <br>
+                            <span class="text-bg">the appropriate quality</span>
+                        </p>
+
+                    </div>
+                    <button class="order-button">Order now</button>
+
+                    <div class="images">
+                        <div class="line-1"> <img src="img/slider-img/img_1.jpg" width="130" alt="photo-1">
+                            <img src="img/slider-img/img_10.jpg" width="130" alt="photo-10">
+                            <img src="img/slider-img/img_8.jpg" width="130" alt="photo-8"></div>
+                        <div class="line-2">
+                            <img src="img/slider-img/img_9.jpg" width="130" alt="photo-9">
+                            <img src="img/slider-img/img_3.jpg" width="130" alt="photo-3">
+                            <img src="img/slider-img/img_2.jpg" width="130" alt="photo-2"></div>
+                        <div class="line-3">
+                            <img src="img/slider-img/img_6.jpg" width="130" alt="photo-6">
+                            <img src="img/slider-img/img_5.jpg" width="130" alt="photo-5">
+                            <img src="img/slider-img/img_7.jpg" width="130" alt="photo-7"></div>
+
+                        <div> <img src="img/slider-img/img_4.jpg" width="130" alt="photo-4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <main>
+
+        <section id="services" class="our-services">
+            <h2>We create quality designs</h2>
+            <p>We specialize in Web Design / Development and Graphic Design</p>
+            <div class="services">
+                <div class="service"><span><img src="img/services-img/bog-post-img.jpg" alt="flask with a deer">
+
+               </span>
+                    <div>
+                        <p class="h">Redesigning with personality</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur.
+                        </p>
+                    </div>
+                </div>
+                <div class="service"><span><img src="img/services-img/bog-post-img.jpg" alt="flask with a deer">
+
+               </span>
+                    <div>
+                        <p class="h"> Web Development</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur.
+                        </p>
+                    </div>
+                </div>
+                <div class="service"><span><img src="img/services-img/bog-post-img.jpg" alt="flask with a deer">
+               </span>
+                    <div>
+                        <p class="h">Web design</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur.
+                        </p>
+                    </div>
+                </div>
+                <div class="service"><span><img src="img/services-img/bog-post-img.jpg" alt="flask with a deer">
+               </span>
+                    <div>
+                        <p class="h">Graphic design</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <button class="order-button min-width">Order now</button>
+        </section>
+        <section id="work" class="our-work">
+            <span class="line">
+            <h3>our work</h3>
+         </span>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+            <div class="countainer">
+                <div class="work-photo">
+
+                    <div class="columns">
+                        <div>
+                            <img src="img/work-img/Portfolio-work-2.jpg" width="385" alt="work-img-2">
+                            <!-- 534*404   -->
+                            <img src="img/work-img/Portfolio-work-1.jpg" width="385" alt="work-img-1">
+                        </div>
+                        <div>
+                            <img src="img/work-img/Portfolio-work-10.jpg" width="191" alt="work-img-10">
+                            <!-- 265*268 -->
+                            <img src="img/work-img/Portfolio-work-9.jpg" width="385" alt="work-img-9">
+                            <!-- 534*404 -->
+                            <img src="img/work-img/Portfolio-work-8.jpg" width="191" alt="work-img-8">
+                            <!-- 264*268 -->
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="columns">
+                            <img src="img/work-img/Portfolio-work-11.jpg" width="191" alt="work-img-11">
+                            <!-- 265*268 -->
+                            <img src="img/work-img/Portfolio-work-4.jpg" width="191" alt="work-img-4">
+                            <!-- 265*268 -->
+                            <img src="img/work-img/Portfolio-work-3.jpg" width="191" alt="work-img-3">
+                            <!-- 265 *133 -->
+                        </div>
+                        <div class="columns">
+                            <img src="img/work-img/Portfolio-work-7.jpg" width="198" alt="work-img-7">
+                            <!-- 275* 200 -->
+                            <img src="img/work-img/Portfolio-work-6.jpg" width="198" alt="work-img-6">
+                            <!-- 275* 193 -->
+                            <img src="img/work-img/Portfolio-work-5.jpg" width="198" alt="work-img-5">
+                            <!-- 275*183 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clients" class="our-clients">
+            <span class="line">
+            <h3>our clients</h3>
+         </span>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt.</p>
+            <div class="client-slider">
+
+                <div class="client bbc"><img src="img/client-png/bbc.png" alt="BBC-logo"></div>
+                <div class="client virgin"><img src="img/client-png/virgin.png" alt="virgin-logo"></div>
+                <div class="client nokia"><img src="img/client-png/nokia.png" alt="nokia-logo"></div>
+                <div class="client apple"><img src="img/client-png/apple.png" alt="apple-logo"></div>
+                <div class="client ford"><img src="img/client-png/ford.png" alt="ford-logo"></div>
+                <div class="client vw"><img src="img/client-png/volkswagen.png" alt="volkswagen-logo"></div>
+                <div class="client x-company"><img src="img/client-png/x-company.png" alt="x-company-logo"></div>
+                <div class="client wiexa"><img src="img/client-png/wiexa.png" alt="wiexa-logo"></div>
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section id="contact" class="contacts">
+            <div class="about-us">
+                <div class="block one">
+                    <h3 class="block__title">About Us</h3>
+                    <div class="block__content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum modi atque fugiat eaque adipisci illum? Ipsum minus officia omnis harum pariatur inventore esse itaque vitae, cumque molestiae possimus, hic culpa.
+                        </p>
+                        <button>Learn more</button>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="block__title">Photo Steam</h3>
+                    <div class="photo-steam block__content">
+                        <img src="img/steam-img/img-1.jpg" alt="steam-img1">
+                        <img src="img/steam-img/img-2.jpg" alt="steam-img2">
+                        <img src="img/steam-img/img-3.jpg" alt="steam-img3">
+                        <img src="img/steam-img/img-4.jpg" alt="steam-img4">
+                        <img src="img/steam-img/img-5.jpg" alt="steam-img5">
+                        <img src="img/steam-img/img-6.jpg" alt="steam-img6">
+                    </div>
+                </div>
+            </div>
+            <div class="latest-tweets">
+                <h3 class="block__title">Latest tweets</h3>
+
+                <div class="block__content">
+                    <div class="tweet">
+                        <span><img src="img//footer-img/Twitter-birs-icon.png" alt="Twitter birs icon"></span>
+                        <div>
+                            <p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span> http://t.co/ WBFKIWHJ</p>
+                            <p> <span class="yellow-text"> 3 days ago</span> </p>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <span><img src="img//footer-img/Twitter-birs-icon.png" alt="Twitter birs icon"></span>
+                        <div>
+                            <p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span> http://t.co/ WBFKIWHJ</p>
+                            <p> <span class="yellow-text"> 3 days ago</span> </p>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <span><img src="img//footer-img/Twitter-birs-icon.png" alt="Twitter birs icon"></span>
+                        <div>
+                            <p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span> http://t.co/ WBFKIWHJ</p>
+                            <p> <span class="yellow-text"> 3 days ago</span> </p>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <span><img src="img//footer-img/Twitter-birs-icon.png" alt="Twitter birs icon"></span>
+                        <div>
+                            <p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span> http://t.co/ WBFKIWHJ</p>
+                            <p> <span class="yellow-text"> 3 days ago</span> </p>
+                        </div>
+                    </div>
+                    <div class="tweet">
+                        <span><img src="img//footer-img/Twitter-birs-icon.png" alt="Twitter birs icon"></span>
+                        <div>
+                            <p>Check Out Dtbaker's <span class="yellow-text">@Arduino</span> Sales Notification <span class="yellow-text">#System</span> http://t.co/ WBFKIWHJ</p>
+                            <p> <span class="yellow-text"> 3 days ago</span> </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="contact-info">
+                    <h3 class="block__title">Contact Info</h3>
+                    <div class="block__content">
+                        <div><img src="img/footer-img/Adress.png" alt="Adress-icon">
+                            <p>Address: 12569 Saint Patrick des Prés, 85000 Paris, France</p>
+                        </div>
+                        <div><img src="img/footer-img/Phone.png" alt="Phone-icon">
+                            <p>
+                                <pre>Phone: <a href="tel:+380458454578" class="yellow-text">+38 045 845-45-78</a>
+       <a href="tel:+380458454579" class="yellow-text">+38 045 845-45-79</a>
+                   </pre>
+                            </p>
+                        </div>
+                        <div><img src="img/footer-img/email.png" alt="email-icon">
+                            <p>E-mail: <a href="mailto:freeforwebdesign@gmail.com" class="yellow-text">freeforwebdesign@gmail.com</a></p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="follow-us">
+                    <h3 class="block__title">Follow Us</h3>
+                    <div class="block__content">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <form action="URL" class="email-send">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="name@gmail.com"></td>
+                                    <td>
+                                        <input type="image" src="img/footer-img/email-icon.png" alt="Submit"></td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="footer-menu">
+            <div>
+
+                <p>Copyright 2013 - FreeForWebDesign.com - All Rights Reserved</p>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li> <a href="#services">services</a></li>
+                    <li> <a href="#work">work</a></li>
+                    <li><a href="#clients">clients</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <script src="js/maskinput.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="js/form-script.js"></script>
+
+    <script src="js/form.min.js"></script>
+</body>
+
+</html>

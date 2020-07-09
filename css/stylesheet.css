@@ -1,0 +1,613 @@
+/* Подключение шрифтов */
+
+@font-face {
+    font-family: "Code Light";
+    src: url("../fonts/code-light/code_light-webfont.woff2") format("woff2"), url("../fonts/code-light/code_light-webfont.woff") format("woff"), url("../fonts/code-light/code_light-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    font-family: "Century Gothic", sans-serif;
+    background-color: #f6f6f6;
+    color: #292929;
+    margin: 0;
+}
+
+
+/* Оформление и позиционирование меню и логотипа */
+
+.main-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f6f6f6;
+    padding: 0 0;
+}
+
+.main-menu ul,
+.footer-menu ul {
+    display: flex;
+    margin: 0;
+}
+
+.main-menu li,
+.footer-menu li {
+    font-family: "Code Light", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    list-style: none;
+    height: 120px;
+    transition: all 0.6s;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    cursor: pointer;
+}
+
+.main-menu li:hover,
+.footer-menu li:hover,
+.menu-none li:hover {
+    background-color: #ffea00;
+    color: #414146;
+}
+
+.main-menu ul a,
+.footer-menu a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.fixed-menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.fixed-menu {
+    justify-content: space-around;
+}
+
+.non-fixed {
+    position: relative;
+    z-index: 1000;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.burger {
+    display: none;
+}
+
+.menu-none {
+    position: fixed;
+    top: -200%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #414146;
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    margin-top: 50px;
+    transition: all 0.9s ease 0s;
+}
+
+.menu-none.active {
+    display: block;
+    top: 0;
+}
+
+.menu-none li {
+    list-style: none;
+    height: 50px;
+    color: #cacaca;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.6s ease;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    line-height: 50px;
+    vertical-align: middle;
+}
+
+
+/* Оформление слайдера */
+
+.slider-inner {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    max-width: 1200px;
+    max-height: 747px;
+    padding: 0 100px 50px;
+    margin-left: 25px;
+}
+
+
+/* Позиционирование изображений */
+
+.slider-inner img {
+    max-width: 100%;
+}
+
+.images {
+    transform: translateX(-80px);
+}
+
+.images div:nth-of-type(2n) {
+    transform: translateX(135px);
+}
+
+
+/* Оформление текста внутри слайдера */
+
+.text {
+    margin-top: 45px;
+    margin-left: -80px;
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 65px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+}
+
+.h-bg {
+    background-color: #ffea00;
+    padding: 0 10px;
+}
+
+.text p {
+    margin-top: 20px;
+}
+
+.text-bg {
+    background-color: #414146;
+    color: #ffffff;
+    padding: 0 3px;
+}
+
+.order-button {
+    position: absolute;
+    left: 15%;
+    bottom: 26%;
+    z-index: 1;
+}
+
+.min-width {
+    display: none;
+}
+
+
+/* Оформление и позиционирование услуг  */
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+}
+
+.services {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.service {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 240px;
+    transition: all 0.8s ease;
+}
+
+.service:nth-of-type(1) {
+    background: #ffea00 url(../img/services-img/graphic-design-icon.png) 50% 20% no-repeat;
+}
+
+.service:nth-of-type(2) {
+    background: #ffea00 url(../img/services-img/web-development.png) 50% 20% no-repeat;
+}
+
+.service:nth-of-type(3) {
+    background: #ffea00 url(../img/services-img/web-design-icon.png) 50% 20% no-repeat;
+}
+
+.service:nth-of-type(4) {
+    background: #ffea00 url(../img/services-img/graphic-design-icon.png) 50% 20% no-repeat;
+}
+
+.service div {
+    background-color: #414146;
+    height: 82px;
+}
+
+.service span {
+    height: 199px;
+}
+
+.service p {
+    box-sizing: border-box;
+    width: 240px;
+    color: #ffffff;
+    font-size: 13px;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 0.6s ease;
+}
+
+.service .h {
+    font-family: "Code Light";
+    font-size: 20px;
+    font-weight: 900;
+    text-align: left;
+    margin: 0 0 0 20px;
+    transform: translateY(-50px);
+    display: block;
+    height: 0;
+    color: #414146;
+    transition: all 0.8s ease;
+}
+
+.service img {
+    width: 240px;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.service div::after {
+    content: "";
+    position: absolute;
+    left: 170px;
+    bottom: 60px;
+    width: 20px;
+    height: 20px;
+    background-color: #414146;
+    transition: all 0.8s ease;
+    opacity: 0;
+}
+
+
+/* Эффект при наведении */
+
+.service:hover {
+    background-color: #414146;
+}
+
+.service:hover p:last-child {
+    opacity: 0;
+}
+
+.service:hover img {
+    opacity: 1;
+}
+
+.service:hover .h {
+    color: #ffffff;
+    transform: translateY(25px);
+}
+
+.service:hover div::after {
+    display: block;
+    transform: rotate(43deg) translate(0, -10px);
+    opacity: 1;
+}
+
+
+/* Позиционирование блока Work */
+
+.our-work {
+    display: flex;
+    flex-direction: column;
+    margin: 90px auto 0;
+}
+
+.line {
+    display: flex;
+}
+
+h3 {
+    margin: auto;
+    box-sizing: border-box;
+    color: #ffea00;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    background-color: #424147;
+    font-weight: 400;
+    width: 159px;
+    height: 31px;
+    padding-top: 5px;
+}
+
+
+/* Горизонтальные линии по бокам от заголовка */
+
+.line::after,
+.line::before {
+    content: "";
+    display: inline-block;
+    width: 43%;
+    height: 1px;
+    background-color: #cacaca;
+    vertical-align: middle;
+    align-self: center;
+}
+
+.line+p {
+    margin: 34px auto;
+    text-align: center;
+}
+
+.countainer {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.work-photo {
+    max-width: 1200px;
+    display: flex;
+    margin: 0 -10px;
+    padding: 30px;
+    justify-content: flex-start
+}
+
+.column {
+    display: flex;
+}
+
+.column .columns:nth-of-type(1) {
+    margin-right: 2px;
+}
+
+.column .columns:nth-of-type(2) {
+    margin-left: 2px;
+}
+
+.work-photo .columns {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.work-photo .columns:nth-of-type(1) div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.work-photo img {
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 100%;
+    margin: 2px;
+    transition: transform 0.6s ease;
+    transform: scale(1);
+}
+
+.work-photo img:hover {
+    transform: scale(1.1);
+    z-index: 100;
+    box-shadow: 0 0 5px 5px #424147;
+}
+
+
+/* Слайдер "Клиенты" */
+
+.our-clients {
+    position: relative;
+    flex-direction: column;
+    margin: 90px 0;
+}
+
+.our-clients p {
+    text-align: center;
+}
+
+
+/* Оформление футера */
+
+footer {
+    background-color: #424147;
+    max-width: 1920px;
+    margin: auto;
+}
+
+footer h3 {
+    text-transform: none;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.contacts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    font-size: 13px;
+    color: #f6f6f6;
+    margin: auto;
+    padding: 15px;
+}
+
+.contacts>div {
+    width: 33%;
+}
+
+.about-us button {
+    width: 121px;
+    height: 37px;
+    font-size: 15px;
+    margin: 30px 0 10px 0;
+    box-shadow: 0 3px 0 0 #ffea00;
+}
+
+
+/* Позиционирование последних твитов */
+
+.tweet,
+.contact-info .block__content>div {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tweet span:not(.yellow-text) {
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.tweet p:last-of-type {
+    font-size: 8px;
+    margin-top: 8px;
+}
+
+
+/* Оформление контактов */
+
+.contact-info .block__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info p {
+    font-size: 13px;
+}
+
+.contact-info .block__content div {
+    align-items: center;
+    margin-bottom: 20px;
+    height: 30px;
+}
+
+pre {
+    padding-top: 15px;
+}
+
+.yellow-text {
+    display: inline;
+    color: #ffea00;
+}
+
+.contact-info img {
+    margin-right: 10px;
+}
+
+
+/* Поле ввода для почты */
+
+footer input[type="email"] {
+    background-color: #424147;
+    border: none;
+    border-bottom: 2px solid #ffea00;
+    padding: 4px;
+    height: 20px;
+    max-width: 250px;
+    outline: none;
+    margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.photo-steam {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.photo-steam img {
+    width: 112px;
+    margin: 3px;
+}
+
+.active {
+    display: block;
+}
+
+.follow-us {
+    padding: 10px;
+}
+
+
+/* Оформление и позиционирование меню в футере */
+
+.footer-menu {
+    background-color: #000000;
+    margin-top: 30px;
+}
+
+.footer-menu>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    max-width: 1200px;
+    color: #ffffff;
+    padding-left: 15px;
+}
+
+.footer-menu p {
+    font-size: 14px;
+}
+
+.footer-menu a {
+    line-height: 30px;
+}
+
+
+/* Оформление кнопок */
+
+button {
+    background-color: #000000;
+    box-sizing: border-box;
+    width: 191px;
+    height: 41px;
+    padding: 5px 20px;
+    box-shadow: 0 5px 0 0 #ffea00;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    font-size: 24px;
+    outline: none;
+}
+
+.clear {
+    height: 120px;
+}
