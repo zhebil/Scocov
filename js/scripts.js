@@ -6,7 +6,7 @@ $(".slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     waitForAnimate: false,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 3000,
     adaptiveHeigth: true,
     dots: true,
@@ -18,8 +18,9 @@ $(".slider").slick({
 $(".client-slider").slick({
     slidesToShow: 5,
     autoplay: true,
+    autoplaySpeed: 3000,
     speed: 1000,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     swipeToSlide: true,
     waitForAnimate: false,
     responsive: [{
