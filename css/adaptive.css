@@ -218,6 +218,7 @@
     }
     .follow-us {
         flex: 0 1 50%;
+        margin-left: -10px;
     }
 }
 

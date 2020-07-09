@@ -9,12 +9,16 @@ $(function() {
         $('.form').append('<a class="form-close"></a>');
 
         //расчитываем высоту и ширину всплывающего окна что бы вывести окно прямо по центру экрана
-        q_width = $('.form').outerWidth() / -2;
-        q_height = $('.form').outerHeight() / -2;
+        var func = function() {
+            q_width = $('.form').outerWidth() / -2;
+            q_height = $('.form').outerHeight() / -2;
+        }
+        func()
         $('.form').css({
             'margin-left': q_width,
             'margin-top': q_height
         });
+
         //выводим затемение страницы и делаем полупрозрачным
         $('body').append('<div id="fade"></div>');
         $('#fade').css({ 'filter': 'alpha(opacity=40)' }).fadeIn();

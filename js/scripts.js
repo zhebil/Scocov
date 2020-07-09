@@ -5,6 +5,7 @@ jQuery(function($) {
 $(".slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    waitForAnimate: false,
     autoplay: false,
     autoplaySpeed: 3000,
     adaptiveHeigth: true,
@@ -18,7 +19,9 @@ $(".client-slider").slick({
     slidesToShow: 5,
     autoplay: true,
     speed: 1000,
-    slidesToScroll: 3,
+    slidesToScroll: 2,
+    swipeToSlide: true,
+    waitForAnimate: false,
     responsive: [{
         breakpoint: 900,
         settings: {
@@ -72,4 +75,10 @@ $(function() {
         }, 100, 'swing');
 
     });
+    $('*[class*="menu"] li:first-child').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 100, 'swing');
+    })
 })

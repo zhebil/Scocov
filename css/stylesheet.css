@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #f6f6f6;
-    padding: 0 0;
+    padding: 0 10px;
 }
 
 .main-menu ul,
@@ -193,6 +193,16 @@ h1 {
     left: 15%;
     bottom: 26%;
     z-index: 1;
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.learn-more {
+    transition: box-shadow 0.4s ease-in-out;
+}
+
+.order-button:hover,
+.learn-more:hover {
+    box-shadow: 0 0 0 5px #ffea00;
 }
 
 .min-width {
@@ -268,6 +278,7 @@ h2 {
     color: #ffffff;
     font-size: 13px;
     margin-top: 20px;
+    padding: 0 10px;
     opacity: 1;
     transition: opacity 0.6s ease;
 }
@@ -372,6 +383,7 @@ h3 {
 
 .line+p {
     margin: 34px auto;
+    padding: 0 10px;
     text-align: center;
 }
 
@@ -421,7 +433,13 @@ h3 {
     transform: scale(1);
 }
 
-.work-photo img:hover {
+.photo-steam img {
+    transition: transform 0.6s ease;
+    transform: scale(1);
+}
+
+.work-photo img:hover,
+.photo-steam img:hover {
     transform: scale(1.1);
     z-index: 100;
     box-shadow: 0 0 5px 5px #424147;
@@ -534,15 +552,17 @@ footer input[type="email"] {
     background-color: #424147;
     border: none;
     border-bottom: 2px solid #ffea00;
+    border-radius: 0;
     padding: 4px;
     height: 20px;
-    max-width: 250px;
+    width: 90%;
     outline: none;
     margin: 0;
 }
 
 table {
     border-collapse: collapse;
+    width: 100%
 }
 
 .photo-steam {
