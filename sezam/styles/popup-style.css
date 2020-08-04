@@ -1,0 +1,165 @@
+.popup-wrapper {
+    background-color: rgba(26, 33, 105, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.span-popup-close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: relative;
+    border-radius: 15px;
+    z-index: 1;
+    width: 700px;
+    height: 800px;
+    background: #fff url(../images/form-bg.svg) 100% 100%/50% no-repeat;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-h {
+    font-size: 36px;
+    line-height: 42px;
+    color: #060A2E;
+    margin-top: 77px;
+}
+
+.form label {
+    position: relative;
+    height: 60px;
+}
+
+.form label::after {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    bottom: -15px;
+    left: 13px;
+    font-size: 18px;
+    color: #BDBDC4;
+}
+
+.form label:first-of-type::after {
+    content: "Имя";
+}
+
+.form label:nth-of-type(2)::after {
+    content: "Email";
+}
+
+.form label:nth-of-type(3)::after {
+    content: "Пароль";
+}
+
+.form label:nth-of-type(4)::after {
+    content: "Повторите пароль";
+}
+
+.form input {
+    position: relative;
+    width: 340px;
+    height: 30px;
+    margin: 12px;
+    border-bottom: 1px solid black;
+    padding: 0 10px;
+}
+
+.form input:focus~label::after {
+    transform: translateY(-20px);
+}
+
+#repeat-password {
+    margin-bottom: 50px;
+}
+
+input[type="submit"] {
+    width: 341px;
+    height: 46px;
+    background-color: #FAFAFB;
+    border-radius: 4px;
+    border: none;
+}
+
+.form a {
+    color: #3140E3;
+}
+
+label[for*="agree"] {
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 22px;
+    color: #222222;
+    padding-left: 51px;
+    position: relative;
+    cursor: pointer;
+}
+
+label[for*="agree"]::before,
+label[for*="agree"]::after {
+    content: "";
+    position: absolute;
+    display: block;
+    transition: all 0.6s ease-in-out;
+}
+
+label[for*="agree"]::before {
+    background-color: #F2F2F2;
+    width: 36px;
+    height: 18px;
+    left: 0;
+    border-radius: 50px;
+}
+
+label[for*="agree"]::after {
+    width: 14px;
+    height: 14px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    left: 1.8px;
+    top: 2px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~label::after {
+    transform: translate(18px);
+}
+
+input[type="checkbox"]:checked~label::before {
+    background-color: #3140E3;
+}
+
+.form-footer {
+    margin-bottom: 53px;
+}

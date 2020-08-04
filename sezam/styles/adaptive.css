@@ -1,0 +1,428 @@
+    @media (max-width:1520px) {
+        .menu-field .good-card {
+            margin-bottom: 50px;
+            max-width: 300px;
+            height: 220px;
+            background-size: 50%;
+        }
+        .menu-field .good-card img {
+            width: 120px;
+            height: 100px;
+        }
+        .menu-field .card-footer {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .menu-field .card-footer-left {
+            /* height: 100%; */
+            display: flex;
+        }
+        .menu-field .card-footer-left span {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .menu-field .card-footer-left span:last-of-type {
+            margin-right: 0;
+        }
+        .menu-field .card-footer-left span:first-child::before {
+            background-size: 90%;
+        }
+        .menu-field .card-footer-left span:last-child::before {
+            background-size: 100%;
+        }
+        .menu-field .card-footer-right {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-right: 30px;
+        }
+        .menu-field .card-footer-right span:first-child {
+            font-size: 20px;
+        }
+        .menu-field .card-footer-right span {
+            margin: 0;
+            font-size: 16px;
+        }
+        h2 {
+            text-align: center;
+        }
+        .goods-cards {
+            max-width: 1040px;
+            margin: 0 auto;
+        }
+        .may-like-block .goods-cards {
+            max-width: 1200px;
+        }
+        .categories {
+            flex-wrap: wrap;
+            max-width: 1400px;
+            justify-content: space-evenly;
+        }
+        .category {
+            width: 50%;
+        }
+        .category img {
+            max-width: 100%;
+        }
+        .mantle {
+            width: 100%;
+            height: 100%;
+        }
+        .category-h {
+            font-size: 30px;
+        }
+        .category:hover .category-h {
+            transform: translateY(300px);
+        }
+    }
+    
+    @media (max-width:1300px) {
+        .menu-field .good-card {
+            margin-bottom: 50px;
+            max-width: 250px;
+            height: 200px;
+            background-size: 55%;
+        }
+        .menu-field .good-card img {
+            width: 100px;
+            height: 85px;
+        }
+        .menu-field .card-footer {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .menu-field .card-footer-left {
+            /* height: 100%; */
+            display: flex;
+        }
+        .menu-field .card-footer-left span {
+            font-size: 25px;
+            margin-top: 20px;
+            margin-left: 30px;
+        }
+        .menu-field .card-footer-left span:last-of-type {
+            margin-right: 0;
+        }
+        .menu-field .card-footer-left span:first-child::before {
+            background-size: 90%;
+        }
+        .menu-field .card-footer-left span:last-child::before {
+            background-size: 100%;
+        }
+        .menu-field .card-footer-right {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-right: 20px;
+        }
+        .menu-field .card-footer-right span:first-child {
+            font-size: 19px;
+        }
+        .menu-field .card-footer-right span {
+            margin: 0;
+            font-size: 17px;
+        }
+        .logo {
+            padding: 0 10px;
+        }
+        .logo img {
+            max-width: 130px;
+            max-height: 50px;
+        }
+        .search {
+            padding-left: 0;
+        }
+        .search::before {
+            left: 10px;
+        }
+        .search input {
+            padding: 0 0 0 40px;
+            width: 150px;
+        }
+        .personal-office {
+            padding: 0 15px;
+        }
+        .log-in {
+            width: 90px;
+            padding: 0;
+            margin-right: 10px;
+        }
+        .sign-up {
+            width: 90px;
+            padding: 0;
+        }
+        .basket {
+            padding: 5px;
+        }
+        .footer-top li {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width:1060px) {
+        .menu-field .good-card {
+            margin-bottom: 50px;
+            max-width: 150px;
+            height: 170px;
+            background-size: 60%;
+        }
+        .menu-field .good-card img {
+            width: 81px;
+            height: 71px;
+        }
+        .menu-field .card-footer {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .menu-field .card-footer-left {
+            height: 100%;
+            display: flex;
+        }
+        .menu-field .card-footer-left span {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        .menu-field .card-footer-left span:last-of-type {
+            margin-right: 0;
+        }
+        .menu-field .card-footer-left span:first-child::before {
+            background-size: 80%;
+        }
+        .menu-field .card-footer-left span:last-child::before {
+            background-size: 80%;
+        }
+        .menu-field .card-footer-right {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-right: 14px;
+        }
+        .menu-field .card-footer-right span:first-child {
+            font-size: 13px;
+        }
+        .menu-field .card-footer-right span {
+            margin: 0;
+            font-size: 11px;
+        }
+    }
+    
+    @media (max-width:768px) {
+        .menu-field {
+            display: none;
+        }
+        .menu-list {
+            flex: 90% 0 0;
+            border: none;
+        }
+        .menu-list-item {
+            border-bottom: 1px solid black;
+        }
+        .menu-list-item-right {
+            position: static;
+            max-width: 100%;
+            width: 100%;
+            padding: 0 30px 0 70px;
+            box-sizing: border-box;
+        }
+        .menu-list-item-right>div {
+            flex: 50% 0 0;
+            padding-right: 30px;
+        }
+        .footer-top {
+            flex-direction: column;
+            margin-top: 0;
+            padding-bottom: 50px;
+        }
+        .category-h {
+            font-size: 25px;
+        }
+        .categories {
+            margin-bottom: 0;
+        }
+        .footer-h {
+            font-size: 30px;
+        }
+        .footer-top h4 {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .footer-top h4::after {
+            transition: all 0.6s ease;
+        }
+        .footer-top li {
+            font-size: 30px;
+            padding-left: 30px;
+        }
+        .footer-top h4::after {
+            content: ">";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            transform: rotate(90deg);
+        }
+        .footer-top h4.active::after {
+            transform: rotate(-90deg);
+        }
+        .footer-wrapper {
+            flex-direction: column;
+            order: -1;
+        }
+        .good-card {
+            margin-bottom: 50px;
+            max-width: 150px;
+            height: 170px;
+            background-size: 60%;
+        }
+        .good-card img {
+            width: 81px;
+            height: 71px;
+        }
+        .card-footer {
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .card-footer-left {
+            height: 100%;
+            display: flex;
+        }
+        .card-footer-left span {
+            font-size: 14px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+        .card-footer-left span:last-of-type {
+            margin-right: 0;
+        }
+        .card-footer-left span:first-child::before {
+            background-size: 80%;
+        }
+        .card-footer-left span:last-child::before {
+            background-size: 80%;
+        }
+        .card-footer-right {
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            margin-right: 14px;
+        }
+        .card-footer-right span:first-child {
+            font-size: 13px;
+        }
+        .card-footer-right span {
+            margin: 0;
+            font-size: 11px;
+        }
+        .footer-logo {
+            margin-top: 40px;
+        }
+    }
+    
+    @media (max-width:665px) {
+        .search::before {
+            left: 10px;
+        }
+        .search {
+            flex: 100% 1 1;
+        }
+        .search input {
+            padding: 0 0 0 40px;
+        }
+        .office-wrapper {
+            position: absolute;
+            display: none;
+            top: 60px;
+            right: -25px;
+        }
+        .nav-menu {
+            padding-right: 0;
+        }
+        .hiden {
+            display: block;
+        }
+        .footer-bottom {
+            font-size: 16px;
+            width: 320px;
+            text-align: center;
+        }
+        .goods-cards {
+            max-width: 440px;
+        }
+        .footer-top h4 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .footer-top li a {
+            font-size: 17px;
+        }
+        .footer-top li {
+            margin-bottom: 5px;
+        }
+        .menu {
+            justify-content: flex-start;
+        }
+    }
+    
+    @media (max-width:550px) {
+        h2 {
+            font-size: 35px;
+        }
+        .category-h {
+            font-size: 20px;
+            line-height: 25px;
+        }
+        .popup {
+            height: 600px;
+        }
+    }
+    
+    @media (max-width: 464px) {
+        .menu-list-item-right {
+            flex-direction: column;
+        }
+        .personal-office {
+            padding: 0 5px;
+        }
+        .office-wrapper {
+            right: -35px;
+        }
+    }
+    
+    @media (max-width:380px) {
+        .container {
+            padding: 0 8px;
+        }
+        .search input {
+            width: 100px;
+        }
+        .popup {
+            height: 500px;
+        }
+        .form input {
+            width: 250px;
+        }
+        label[for*="agree"] {
+            padding-left: 60px;
+        }
+        label[for*="agree"]::before {
+            left: 20px;
+        }
+        label[for*="agree"]::after {
+            left: 21.8px;
+        }
+        .footer-bottom {
+            width: 300px;
+        }
+    }
