@@ -94,6 +94,217 @@
         font-weight: 400;
     }
     
+    .burger,
+    .burger::before,
+    .burger::after {
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        display: block;
+        width: 24px;
+        height: 3px;
+        background-color: #EF5D50;
+        position: relative;
+        border-radius: 2px;
+    }
+    
+    .burger.active {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    .burger::before,
+    .burger::after {
+        height: 2px;
+        content: "";
+        position: absolute;
+    }
+    
+    .burger::before {
+        top: -7px;
+    }
+    
+    .burger.active::before {
+        -webkit-transform: rotate(-90deg) translate(-7px);
+        transform: rotate(-90deg) translate(-7px);
+    }
+    
+    .burger.active::after {
+        display: none;
+    }
+    
+    .burger::after {
+        top: 7px;
+    }
+    
+    .burger-wrapper {
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .search {
+        padding-left: 100px;
+    }
+    
+    .search label {
+        position: relative;
+    }
+    
+    .search label::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: url(./app/images/search-icon.svg) 100% no-repeat;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 15px;
+    }
+    
+    .search label::after {
+        content: "Найти товар";
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 80px;
+        color: gray;
+        -webkit-transition: all 0.6s ease;
+        transition: all 0.6s ease;
+    }
+    
+    .search label.not-active::after {
+        -webkit-transform: translate(-30px, -18px);
+        transform: translate(-30px, -18px);
+    }
+    
+    .search label input {
+        background-color: #FAFAFB;
+        max-width: 500px;
+        height: 50px;
+        border-radius: 20px;
+        padding: 0 80px;
+    }
+    
+    .container {
+        background-color: #F6F6F6;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+    
+    .container.menu-container {
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        max-width: 100%;
+        top: 0;
+        background-color: #fff;
+        -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.05);
+    }
+    
+    .container.menu-container .menu {
+        max-width: 1668px;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        height: 90px;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    
+    .container.menu-container .menu .nav-menu {
+        padding: 0 20px;
+        cursor: pointer;
+    }
+    
+    .logo {
+        padding: 0 20px;
+    }
+    
+    .logo img {
+        max-width: 157px;
+        max-height: 68px;
+    }
+    
+    .office-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-flex: 100%;
+        -ms-flex: 100% 0 0px;
+        flex: 100% 0 0;
+    }
+    
+    .personal-office,
+    .basket {
+        padding: 38px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        position: relative;
+    }
+    
+    .log-in {
+        padding: 9px 22px;
+        width: 101px;
+        height: 49px;
+        color: #F6F6F6;
+        font-size: 20px;
+        line-height: 155%;
+        background: #3140E3;
+        border-radius: 100px;
+        margin-right: 33px;
+    }
+    
+    .sign-up {
+        padding: 9px 22px;
+        width: 239px;
+        height: 49px;
+        border: 1px solid #3140E3;
+        border-radius: 100px;
+        font-size: 20px;
+        line-height: 155%;
+        color: #3140E3;
+        background-color: #fff;
+    }
+    
+    .personal-office img,
+    .basket img {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .hiden {
+        display: none;
+    }
+    
     .container {
         background-color: #F6F6F6;
         max-width: 1920px;
