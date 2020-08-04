@@ -169,27 +169,11 @@
         content: "";
         width: 20px;
         height: 20px;
-        background: url(./app/images/search-icon.svg) 100% no-repeat;
+        background: url(../images/search-icon.svg) 100% no-repeat;
         position: absolute;
         z-index: 2;
         top: 0;
         left: 15px;
-    }
-    
-    .search label::after {
-        content: "Найти товар";
-        display: block;
-        position: absolute;
-        top: 5px;
-        left: 80px;
-        color: gray;
-        -webkit-transition: all 0.6s ease;
-        transition: all 0.6s ease;
-    }
-    
-    .search label.not-active::after {
-        -webkit-transform: translate(-30px, -18px);
-        transform: translate(-30px, -18px);
     }
     
     .search label input {
@@ -279,8 +263,14 @@
         font-size: 20px;
         line-height: 155%;
         background: #3140E3;
+        border: 1px solid #3140E3;
         border-radius: 100px;
         margin-right: 33px;
+    }
+    
+    .log-in:hover {
+        background: #fff;
+        color: #3140E3;
     }
     
     .sign-up {
@@ -293,6 +283,11 @@
         line-height: 155%;
         color: #3140E3;
         background-color: #fff;
+    }
+    
+    .sign-up:hover {
+        background-color: #3140E3;
+        color: #fff;
     }
     
     .personal-office img,
