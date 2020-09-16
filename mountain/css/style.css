@@ -1210,6 +1210,158 @@ h6 {
   /* width: 100%; */
 }
 
+.popup {
+  width: 100%;
+  max-width: 600px;
+  min-height: 300px;
+  background-color: #FCFCFC;
+  color: black;
+  border-radius: 15px;
+  padding: 20px 15px;
+  position: relative;
+  max-height: auto;
+}
+
+.popup-container {
+  height: 100%;
+}
+
+.popup__wrapper {
+  overflow-y: auto;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.popup__wrapper.active {
+  opacity: 1;
+}
+
+.popup__content {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup__close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: monospace;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.popup__close-button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: black;
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.popup .popup__button {
+  width: 300px;
+  border-radius: 5px;
+}
+
+.popup .blog__article {
+  opacity: 1;
+  display: block;
+  padding: 0;
+}
+
+.popup .blog__article-descr {
+  overflow: visible;
+}
+
+.price__img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 300px;
+  width: 100%;
+}
+
+.price__img img {
+  display: block;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.price__popup-height:before {
+  content: "Высота:";
+}
+
+.price__popup-level:before {
+  content: "Уровень:";
+}
+
+.price__popup-price:before {
+  content: "Цена:";
+}
+
+.price__popup-title,
+.price__popup-height,
+.price__popup-level,
+.price__popup-price {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.price__popup-title:before,
+.price__popup-height:before,
+.price__popup-level:before,
+.price__popup-price:before {
+  font-weight: normal;
+}
+
+.price__popup-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
 body {
   font-family: "Roboto";
   color: #061B28;
@@ -1516,5 +1668,49 @@ body {
 
   #map {
     height: 300px;
+  }
+
+  .table__row:first-child {
+    display: none;
+  }
+
+  .table__row .table__cell:not(:first-child) {
+    display: none;
+  }
+
+  .table {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+
+  .table__row {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50% 0 1;
+            flex: 50% 0 1;
+    max-width: 50%;
+  }
+
+  .table__cell {
+    width: 100%;
+    -webkit-box-flex: 100%;
+        -ms-flex: 100% 0 1;
+            flex: 100% 0 1;
+    max-width: 100%;
+  }
+
+  .price__text {
+    max-width: 90%;
+  }
+
+  .price {
+    height: auto;
+  }
+
+  .price__inner {
+    margin: 50px 0;
   }
 }

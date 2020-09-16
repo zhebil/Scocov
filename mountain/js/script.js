@@ -1,5 +1,21 @@
 "use strict";
 
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -363,7 +379,7 @@ function printList(_ref) {
       titleText = document.createElement("p");
   blogListItem.classList.add("blog__list-item");
 
-  if (id === 1) {
+  if (id === 1 && window.innerWidth >= 768) {
     blogListItem.classList.add("active");
   }
 
@@ -393,13 +409,21 @@ var listItem = document.querySelectorAll(".blog__list-item"),
     articleDescr = article.querySelector(".blog__article-descr");
 var id = 1,
     i = 1;
-toggleArticle(false);
+
+if (window.innerWidth >= 768) {
+  toggleArticle(false);
+}
+
 listItem.forEach(function (item) {
   item.addEventListener("click", toggleActive);
   item.addEventListener("click", getId);
   item.addEventListener("click", function () {
     return toggleArticle(false);
   });
+
+  if (window.innerWidth <= 768) {
+    item.addEventListener("click", articlePopupOpen);
+  }
 });
 
 function toggleActive() {
@@ -493,13 +517,16 @@ function autoTabs() {
   interval = setInterval(toggleArticle, 5000);
 }
 
-autoTabs();
-blog.addEventListener("mouseenter", function () {
-  clearInterval(interval);
-});
-blog.addEventListener("mouseleave", function () {
+if (window.innerWidth >= 768) {
   autoTabs();
-});
+  blog.addEventListener("mouseenter", function () {
+    clearInterval(interval);
+  });
+  blog.addEventListener("mouseleave", function () {
+    autoTabs();
+  });
+}
+
 ;
 var tableRow = document.querySelectorAll(".table__row:not(:first-child)");
 console.log(tableRow);
@@ -532,6 +559,141 @@ helpInput.forEach(function (item) {
 // }
 // };
 
+var Popup = function Popup() {
+  var _this2 = this;
+
+  _classCallCheck(this, Popup);
+
+  var popupWrapper = document.querySelector(".popup__wrapper"),
+      popup = document.querySelector(".popup");
+  var closeButton;
+  this.popupContent = document.querySelector(".popup__content");
+
+  this.popupOpen = function (event) {
+    popupWrapper.style.display = "flex";
+    setTimeout(function () {
+      popupWrapper.classList.add("active");
+    }, 100);
+    body.style.overflow = "hidden";
+  };
+
+  this.popupClose = function (event) {
+    event.stopPropagation();
+    _this2.popupContent.textContent = "";
+    popupWrapper.classList.remove("active");
+    setTimeout(function () {
+      popupWrapper.style.display = "none";
+    }, 400);
+    closeButton.remove();
+    body.style.overflow = "auto";
+  };
+
+  closeButton = document.createElement("div");
+  closeButton.classList.add("popup__close-button");
+  closeButton.textContent = "x";
+  popup.appendChild(closeButton);
+  popup.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+  popupWrapper.addEventListener("click", this.popupClose);
+  closeButton.addEventListener("click", this.popupClose);
+}; // //////////////////////////////////////////
+
+
+var PricePopup = /*#__PURE__*/function (_Popup) {
+  _inherits(PricePopup, _Popup);
+
+  var _super = _createSuper(PricePopup);
+
+  function PricePopup(content, img) {
+    var _this3;
+
+    _classCallCheck(this, PricePopup);
+
+    _this3 = _super.call(this);
+    var title = content.title;
+    var image = document.createElement("div");
+    image.classList.add("price__img");
+    image.innerHTML = "<img src=\"./img/mount-".concat(img, ".jpg\">");
+
+    _this3.popupContent.appendChild(image);
+
+    for (var item in content) {
+      var elem = document.createElement("div");
+      elem.classList.add("price__popup-".concat(item));
+      elem.textContent = content[item];
+
+      _this3.popupContent.appendChild(elem);
+    }
+
+    addButton(_this3.popupContent, "Заказать");
+    return _this3;
+  }
+
+  return PricePopup;
+}(Popup);
+
+var itemArray;
+var priceRow = document.querySelectorAll(".table__row:not(:first-child)");
+priceRow.forEach(function (item) {
+  item.addEventListener("click", function () {
+    var img = item.getAttribute("data-img-id");
+    itemArray = Array.from(item.querySelectorAll(".table__cell")).map(function (cell) {
+      return cell.textContent;
+    });
+    var pricePopup = new PricePopup(priceObjGenerator(itemArray), img);
+    pricePopup.popupOpen();
+  });
+});
+
+function priceObjGenerator(arr) {
+  var itemObj = {};
+  itemObj.title = arr[0];
+  itemObj.height = arr[1];
+  itemObj.level = arr[2];
+  itemObj.price = arr[3];
+  return itemObj;
+}
+
+function addButton(block, text) {
+  var button = document.createElement("div");
+  button.classList.add("orange-button", "popup__button");
+  var a = document.createElement("a");
+  a.classList.add("button__link");
+  a.textContent = text;
+  button.appendChild(a);
+  block.appendChild(button);
+} // /////////////////////////////////////////////////
+
+
+var ArticlePopup = /*#__PURE__*/function (_Popup2) {
+  _inherits(ArticlePopup, _Popup2);
+
+  var _super2 = _createSuper(ArticlePopup);
+
+  function ArticlePopup(content) {
+    var _this4;
+
+    _classCallCheck(this, ArticlePopup);
+
+    _this4 = _super2.call(this);
+    var article = blogArticle.cloneNode(true, true);
+
+    _this4.popupContent.appendChild(article);
+
+    console.log(article);
+    return _this4;
+  }
+
+  return ArticlePopup;
+}(Popup);
+
+function articlePopupOpen() {
+  var articlePopup = new ArticlePopup();
+  articlePopup.popupOpen();
+}
+
+;
 var burger = document.querySelector(".burger__wrapper"),
     menu = document.querySelector(".menu__list"),
     body = document.querySelector("body");
@@ -547,3 +709,14 @@ function burgerFunction() {
     body.style.overflow = "auto";
   }
 }
+
+var menuLink = document.querySelectorAll('.menu__link');
+menuLink.forEach(function (item) {
+  item.addEventListener("click", function () {
+    if (menu.classList.contains("active")) {
+      menu.classList.remove("active");
+      body.style.overflow = "auto";
+      burger.children[0].classList.toggle("active");
+    }
+  });
+});
